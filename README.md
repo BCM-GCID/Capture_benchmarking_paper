@@ -3,4 +3,4 @@
 1. Viral reads from pre & post capture data sets were were assembled and read stats were generated using [Virmap](https://github.com/cmmr/virmap)
 2. Figure 2 deptics viral read recovery efficiency.
 3. Figure 3 compares genome coverage post-capture vs pre-capture.
-4. Breadth of coverage calculation
+4. Figure 4 shows the breadth of coverage (20x) for each sample.
