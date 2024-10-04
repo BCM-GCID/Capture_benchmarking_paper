@@ -7,7 +7,7 @@
 </details>
 
 <details>
- <summary><h2>2. Figure 2 deptics viral read recovery efficiency.</h2></summary>
+ <summary><h2>2. Figure 2 depicts viral read recovery efficiency.</h2></summary>
 
 </details>
 
