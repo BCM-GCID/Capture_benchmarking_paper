@@ -4,10 +4,10 @@
 2. Figure 2 deptics viral read recovery efficiency.
 3. Figure 3 compares genome coverage post-capture vs pre-capture.
 <details>
- <summary><b><big>4. Figure 4 shows the breadth of coverage (20x) for each sample. </big></b></summary>
+ <summary><b><h2>4. Figure 4 shows the breadth of coverage (20x) for each sample. </h2></b></summary>
 
  
- <h3>Breadth of 20x coverage</h3>h3>
+ <h3>Breadth of 20x coverage</h3>
 
 To calculate the breadth of coverage, we first align the reads to a given reference genome (see below), and then use `samtools depth` to calculate the coverage at each base across the genome.
 
