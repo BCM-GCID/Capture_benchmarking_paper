@@ -5,10 +5,13 @@
 3. Figure 3 compares genome coverage post-capture vs pre-capture.
 <details>
  <summary>4. Figure 4 shows the breadth of coverage (20x) for each sample. </summary>
-## Breadth of 20x coverage
-To calculate the breadth of coverage, first we perform the alignmetns of the reads to a given reference genome (see below), and then we use samtools depth to calculate the coverage at each individual base in the genome.
+### Breadth of 20x coverage
 
-We used bwa mem for alignments, and different reference genomes. For RSV, we used the reference for RSV/A and RSV/B that were recently published by our group [here](https://academic.oup.com/ve/article/10/1/vead086/7503540). For Norovirus, we used the specific assembled genome from each sample (assembled using capture probes) as a reference. For calculating the coverage, we used a filter for minimum mapping quality of 20 phreds (-q 20).
+To calculate the breadth of coverage, we first align the reads to a given reference genome (see below), and then use `samtools depth` to calculate the coverage at each base across the genome.
+
+For the alignments, we used `bwa mem` and different reference genomes depending on the virus. For RSV, we used the RSV/A and RSV/B reference genomes that were recently published by our group, which can be found [here](https://academic.oup.com/ve/article/10/1/vead086/7503540). For Norovirus, we used the assembled genome from each sample (assembled using capture probes) as a reference. To ensure quality, we applied a filter for a minimum mapping quality of 20 Phred scores (`-q 20`) when calculating the coverage.
+
+Here’s the code we used for the alignment and coverage calculation:
 
  ```
 # Performing alignment for each sample
@@ -19,11 +22,11 @@ cov20=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 20 {coun
 cov30=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 30 {count++} END {print count}')
 ```
 Where:
-reference: is the reference genome
-read1: the fastq file containing reads 1
-read2: the fastq file containing reads 2
-outputdir: the output directory
-name: the sample name
+`reference`: is the reference genome
+`read1`: the fastq file containing reads 1
+`read2`: the fastq file containing reads 2
+`outputdir`: the output directory
+`name`: the sample name
 
 Info about the RSV reference genomes here: https://doi.org/10.1093/ve/vead086
 </details>
