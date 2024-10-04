@@ -3,4 +3,28 @@
 1. Viral reads from pre & post capture data sets were were assembled and read stats were generated using [Virmap](https://github.com/cmmr/virmap)
 2. Figure 2 deptics viral read recovery efficiency.
 3. Figure 3 compares genome coverage post-capture vs pre-capture.
-4. Figure 4 shows the breadth of coverage (20x) for each sample.
+<details>
+ <summary>4. Figure 4 shows the breadth of coverage (20x) for each sample. </summary>
+## Breadth of 20x coverage
+To calculate the breadth of coverage, first we perform the alignmetns of the reads to a given reference genome (see below), and then we use samtools depth to calculate the coverage at each individual base in the genome.
+
+We used bwa mem for alignments, and different reference genomes. For RSV, we used the reference for RSV/A and RSV/B that were recently published by our group [here](https://academic.oup.com/ve/article/10/1/vead086/7503540). For Norovirus, we used the specific assembled genome from each sample (assembled using capture probes) as a reference. For calculating the coverage, we used a filter for minimum mapping quality of 20 phreds (-q 20).
+
+ ```
+# Performing alignment for each sample
+bwa mem -t 4 -T 0 reference read1 read2 | samtools view -hb - | samtools sort -o $outputdir/${name}.sorted.bam -
+
+# Calculating the breadth of coverage for 20x and 30x
+cov20=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 20 {count++} END {print count}')
+cov30=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 30 {count++} END {print count}')
+```
+Where:
+reference: is the reference genome
+read1: the fastq file containing reads 1
+read2: the fastq file containing reads 2
+outputdir: the output directory
+name: the sample name
+
+Info about the RSV reference genomes here: https://doi.org/10.1093/ve/vead086
+</details>
+   
