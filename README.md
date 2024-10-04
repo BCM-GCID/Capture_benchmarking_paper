@@ -37,10 +37,10 @@ cov20=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 20 {coun
 cov30=$(samtools depth -q 20 $outputdir/${name}.sorted.bam | awk '$3 >= 30 {count++} END {print count}')
 ```
 Where:
-`reference`: is the reference genome
-`read1`: the fastq file containing reads 1
-`read2`: the fastq file containing reads 2
-`outputdir`: the output directory
+`reference`: is the reference genome;
+`read1`: the fastq file containing reads 1;
+`read2`: the fastq file containing reads 2;
+`outputdir`: the output directory;
 `name`: the sample name
 
 <h3> Plotting the breadth of coverage (20x)</h3>
