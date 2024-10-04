@@ -29,7 +29,7 @@ For the alignments, we used `bwa mem` and different reference genomes depending 
 Here’s the code we used for the alignment and coverage calculation:
 
  ```
-# Performing alignment for each sample
+# Performing alignment for each sample. The samtools commands will convert the output to bam and immediatelly sort the output into the final sorted file.
 bwa mem -t 4 -T 0 reference read1 read2 | samtools view -hb - | samtools sort -o $outputdir/${name}.sorted.bam -
 
 # Calculating the breadth of coverage for 20x and 30x
