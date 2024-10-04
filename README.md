@@ -1,19 +1,19 @@
 # Complete Genomic Characterization of Global Pathogens, Respiratory Syncytial Virus (RSV), and Human Norovirus (HuNoV) Using Probe-based Capture Enrichment.
- - _Preprint: https://www.biorxiv.org/content/10.1101/2024.09.16.613242v1_
+ <h3>Preprint: https://www.biorxiv.org/content/10.1101/2024.09.16.613242v1</h3>
 
 <details>
- <summary><h2>1. Viral reads from pre & post capture data sets were were assembled and read stats were generated using [Virmap](https://github.com/cmmr/virmap) </h2></summary>
-
+ <summary><h2>1. Pre & post capture viral assemblies</h2></summary>
+ To evaluate the capability of the capture methodology to assemble full-length genomes, the VirMAP:https://github.com/cmmr/virmap pipeline was used to reconstruct RSV and HuNoV genomes. Trimmed and host-filtered reads were processed through VirMAP (24) to assemble complete RSV or HuNoV genomes. The VirMAP summary statistics include information on reconstructed genome length, the number of reads mapped to the reconstruction, and the average coverage across the genome.
 </details>
 
 <details>
  <summary><h2>2. Figure 2 depicts viral read recovery efficiency.</h2></summary>
-
+Viral read recovery efficiency. Percent of trimmed, non-human sequence reads (post-processing) that mapped to the target viral genome in pre-capture (circles) and post-capture (triangles) libraries. CT value range of samples: ‘CT <20’ (red), ‘CT 20 to 30’ (light blue), ‘CT > 30’ (green) & ND (not detected) (pink). A: Viral reads mapping to RSV genomes, split by two subtypes. B: Viral reads mapping to HuNoV genomes, split by genotypes (GI.1, GII.4, Other GII).
 </details>
 
 <details>
  <summary><h2>3. Figure 3 compares genome coverage post-capture vs pre-capture.</h2></summary>
-
+Average genome coverage obtained in post-capture (triangles) and pre-capture (circles) samples. Genome reconstruction was classified as follows: ‘complete’ (within expected length range, >90% completeness & >20x coverage), ‘complete with low coverage’ (within expected length range, >90% completeness & <20x coverage), or ‘incomplete’ (below expected length range, <90% completeness & <20x coverage). CT value range of samples: ‘CT <20’ (red), ‘CT 20 to 30’ (light blue), ‘CT > 30’ (green) & ‘ND’ (pink). A: RSV samples split by RSV-A or RSV-B genotype. B: HuNoV samples split by five genotypes (GI.1, GII.4, Other GII).
 </details>
 
 <details>
