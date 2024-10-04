@@ -44,7 +44,7 @@ Where:
 `name`: the sample name.
 
 <h3> Plotting the breadth of coverage (20x)</h3>
-The plots were created using the R script uploaded in the `fig4` subfolder of this Github page. The table containing the calculated breadth fof coverage (20x) is also found in that folder. For calcuating the percentages of genomes covered by 20x coverage, we used the reference genome lengths for RSV (15243bp), or an average of the assembled genome lengths for all samplesin the case of NoV (7526.148148bp).
+The plots were created using the R script uploaded in the `scripts/fig4` subfolder of this Github page. The table containing the calculated breadth fof coverage (20x) is also found in that folder. For calcuating the percentages of genomes covered by 20x coverage, we used the reference genome lengths for RSV (15243bp), or an average of the assembled genome lengths for all samplesin the case of NoV (7526.148148bp).
 
 
 Info about the RSV reference genomes here: https://doi.org/10.1093/ve/vead086
