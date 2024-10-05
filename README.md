@@ -52,6 +52,7 @@ Info about the RSV reference genomes here: https://doi.org/10.1093/ve/vead086
 
 
 <details>
- <summary><h2>5. Figure 5 </h2></summary>
+ <summary><h2>5. Figure 5 shows RSV expression profile analysis </h2></summary>
+VirMAP trimmed reads from both the pre-and post-capture datasets were mapped to RSV-A ON and RSV-B BA reference genomes, according to the sample genotypes, using BBMap version 39.01. Gene annotation for the reference genomes ON and BA was conducted using VIGOR. Since RSV is a negative-stranded RNA virus, read pairs with read 1 mapped to the negative strand are from the viral genome, while read pairs with read 1 mapped to the positive strand of the reference genome are from the viral mRNAs. Read pairs were assigned to each gene using featureCounts version 2.0.1 with “-s 1 -p” options for counting read pairs mapped to the positive strand of the reference genome. The read pair counts assigned to each gene were then normalized to the number of read pairs per kb gene length and per million mapped reads (FPKM) and plotted using the R ggplot2 package.
 
 </details>
